@@ -1,0 +1,38 @@
+.tabsContainer {
+    width: 500px;
+}
+
+.tabsContainer button {
+    width: 50%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Open Sans' , sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border: 1px solid #DFE5EC;
+    box-sizing: border-box;
+    border-radius: 0 10px 10px 0;
+}
+
+.tabsContainer button:first-child {
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.tabsContainer button:hover {
+    color: white;
+    background: #2196F3;
+}
+
+.active {
+    background-color: #2196F3;
+    color: white;
+}

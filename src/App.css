@@ -1,8 +1,19 @@
-.counter {
-  margin-left: 20px;
+.app {
+  width: 960px;
+  margin: 0px auto;
+  padding: 0;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 0.46fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "Logo Logo"
+  "Filters MainContent";
 }
 
-.counter button {
-  padding: 10px;
-  margin-left: 5px;
+.logo { 
+  grid-area: Logo;
+  margin: 0px auto;
+  padding-bottom: 50px;
 }
+.filters { grid-area: Filters; }
+.mainContent { grid-area: MainContent; }

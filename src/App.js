@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-
+import Filters from './components/Filters/Filters';
+import Logo from './assets/Logo.svg'
+import MainContent from './components/MainContent/MainContent';
 const App = () => {
-  const [counter, setCounter] = useState(0)
-  return (
-    <div className="counter">
-      <p>Счётчик: {counter}</p>
 
-      <button onClick={() => {setCounter(counter + 1)}}>+</button>
-      <button onClick={() => {setCounter(counter - 1)}}>-</button>
-      <button onClick={() => {setCounter(0)}}>Сброс</button>
+  const [currentPortion, setCurrentPortion] = useState(1);
+  const [dataPerPage] = useState(30);
+
+  const [priceState, setPriceState] = useState(false)
+  const [durationState, setDurationState] = useState(false)
+
+  return (
+    <div className='app'>
+      <img src={Logo} className='logo' alt={'logo'}></img>
+      <Filters className='filters' setCurrentPortion={setCurrentPortion} setPriceState={setPriceState} setDurationState={setDurationState}/>
+      <MainContent className='mainContent' currentPortion={currentPortion} setCurrentPortion={setCurrentPortion} dataPerPage={dataPerPage} 
+      setPriceState={setPriceState} setDurationState={setDurationState} priceState={priceState} durationState={durationState}/>
     </div>
+    
   )
 }
 
